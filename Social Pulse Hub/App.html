@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<= cvghtml>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Social Pulse Hub App</title>
+        <link rel="stylesheet" href="./App.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="App.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="home item">
+                    <a href="App.html"><img src="home-button_14237760.png" alt="Home" id="img"></a>
+                    <h3 id="home">HOME</h3>
+                </div>
+                
+                <div class="contacts item">
+                    <div class="cont">
+                        <img src="contacts-book_9722912.png" alt="Contacts" id="img">
+                        <span>CONTACTS</span>
+                    </div>
+                    <div class="popup-content">
+                        <div class="contacts-content content">
+                            <p id="contacts">
+                                Tell 0719370429 <br>
+                                <a href="mailto:ndungueric49@gmail.com">Email us Today</a>
+                            </p>
+                            <p id="fb-contacts">
+                                <a href="#">Social Pulse Hub</a> <br>
+                                in all platforms
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about item">
+                    <div class="abou">
+                        <img src="user_8370817.png" alt="About" id="img">
+                        <span>ABOUT</span>
+                    </div>
+                    <div class="popup-content">
+                        <div class="about-content content">
+                            <p>An online social media dashboard 
+                                tool for managing accounts performance from various platforms
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Modal container -->
+            <div class="modal-container" id="modal-container">
+                <div class="modal-content" id="modal-content"></div>
+            </div>
+            
+               
+        </div>
+        </div>
+                   <div class="img-grid">              
+                        <span id="span-txt"><h3>Streamline Your Social Universe!</h3>
+                        <p>
+                            Welcome to <b>Social Pulse Hub</b>, your ultimate dashboard tool for 
+                            managing and optimizing your social media<br> accounts  from various 
+                            platforms. Dive into detailed analytics, <br>effortlessly schedule posts, and engaging
+                            with your audience all in one intuitive interface!. 
+                        </p>
+
+                        </span>
+                        <img src="Image2.jpeg">
+                   </div>
+                   
+            <div class="sidebar">
+
+                <img src="LOGO.PNG" id="logo">
+                <span id="Title">Social Pulse Hub</span>
+                <a href="#" class="nav-link" data-content="facebook"id="facebook-link"><img src="facebook_5968764.png" class="fab fa-facebook"> Facebook</a>
+                <a href="#" class="nav-link" data-content="Instagram"id="instagram-link"><img src="instagram_3955024.png" class="fab fa-instagram"> Instagram</a>
+                <a href="#" class="nav-link" data-content="twitter"id="twitter-link"><img src="X.jpg" class="fab fa-twitter"> </a>
+                <div class="profile">
+                    <div class="acc">
+                        <img src="person_16213525.png" alt="Profile" class="fab fa-account">
+                        <span>PROFILE</span>
+                    </div>
+                    <div class="popup-account-content">
+                            <a href="#">Account</a>
+                    </div>
+                </div>
+            </div>
+          <div id="root">
+          </div>
+            <div class="display-insights" id="display-insights">
+
+            </div>
+                <!-- Content will be loaded here dynamically -->
+
+        <!-- Facebook SDK -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+<script src="Instagram.js"></script>
+<script src="twitter.js"></script>
+<script src="Facebook.js"></script>
+  <script>
+  // Load the Facebook SDK asynchronously
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+// Initialize the Facebook SDK
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '2486182024914560',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v13.0'
+  });
+
+  // Check login status and display appropriate UI
+  FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+      // User is logged into Facebook and your app
+      fetchUserData();
+    } else {
+      // User is not logged into Facebook, show login button
+      document.querySelector('#facebook.login').addEventListener('click', function() {
+        FB.login(function(response) {
+          if (response.authResponse) {
+            // User authorized your app and logged in
+            fetchUserData();
+          } else {
+            // User cancelled login or did not authorize your app
+            console.log('User cancelled login or did not fully authorize.');
+          }
+        }, {scope: 'public_profile,email,user_posts'}); // Add additional scopes as needed
+      });
+    }
+  });
+
+  // Function to fetch user data and display insights
+  function fetchUserData() {
+    FB.api('/me', {fields: 'id,name'}, function(response) {
+      if (response && !response.error) {
+        console.log('Successful login for: ' + response.name);
+        // Example: Fetch user posts
+        FB.api('/me/posts', function(postsResponse) {
+          if (postsResponse && !postsResponse.error) {
+            const rootElement = document.querySelector('.display-insights');
+            rootElement.innerHTML = ''; // Clear previous content
+            postsResponse.data.forEach(function(post) {
+              const postElement = document.createElement('div');
+              postElement.textContent = post.message || post.story || '';
+              rootElement.appendChild(postElement);
+            });
+          } else {
+            console.error('Error fetching posts:', postsResponse.error);
+          }
+        });
+      } else {
+        console.error('Error fetching user data:', response.error);
+      }
+    });
+  }
+};
+</script>
+
+
+<script>
+    // Instagram App Credentials
+const instagramAppId = '491404200043534';
+const instagramRedirectUri = 'http://localhost/3000'; 
+const instagramAppSecret = 'ffabfbaea9c9889ee403c395352f882c';
+// Instagram API URLs
+const instagramAuthUrl = `https://api.instagram.com/oauth/authorize?client_id=${instagramAppId}&redirect_uri=${encodeURIComponent(instagramRedirectUri)}&scope=user_profile,user_media&response_type=code`;
+
+// Event listener for Instagram login button
+document.getElementById('instagram-login').addEventListener('click', function() {
+  // Open Instagram login popup
+  const popupWindow = window.open(instagramAuthUrl, 'instagram-login-popup', 'width=600,height=400');
+
+  // Listen for messages from the popup
+  window.addEventListener('message', function(event) {
+    // Check if message is from the popup window and has the access token
+    if (event.origin === window.location.origin && event.data.access_token) {
+      const accessToken = event.data.access_token;
+      fetchInstagramInsights(accessToken);
+      popupWindow.close(); // Close the popup after getting the access token
+    }
+  });
+});
+
+// Function to fetch Instagram insights (user media) using access token
+function fetchInstagramInsights(accessToken) {
+  // Use access token to fetch user's media
+  fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url&access_token=${accessToken}`)
+    .then(response => response.json())
+    .then(feedData => {
+      // Display fetched data in the insights element
+      const insightsElement = document.querySelector('.display-insights');
+      insightsElement.innerHTML = ''; // Clear previous content
+      feedData.data.forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.innerHTML = `<img src="${post.media_url}" alt="${post.caption}" />`;
+        insightsElement.appendChild(postElement);
+      });
+    })
+    .catch(error => console.error('Error fetching Instagram insights:', error));
+}
+
+  </script>
+  <footer id="footer">
+    <div class="footer">
+      <a href="App.html"><img src=""></a>
+      <span>Social Pulse Hub</span>
+    </div>
+
+  </footer>
+            
+    </body>                
+</html>

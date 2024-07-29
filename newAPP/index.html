@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your App</title>
+</head>
+<body>
+  <div id="root">
+    <button onclick="login()">Login with Facebook</button>
+    <div id="feed"></div>
+  </div>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '2486182024914560', // Replace with your actual Facebook App ID
+        cookie     : true,           // Enable cookies to allow the server to access the session
+        xfbml      : true,           // Parse social plugins on this webpage
+        version    : 'v13.0'         // Use this Graph API version
+      });
+
+      FB.AppEvents.logPageView();   // Log page view event
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+    function login() {
+      FB.login(function(response) {
+        if (response.authResponse) {
+          console.log('Welcome! Fetching your information....');
+          FB.api('/me', { fields: 'name, email, feed' }, function(response) {
+            console.log('Good to see you, ' + response.name + '.');
+            displayFeed(response.feed.data);
+          });
+        } else {
+          console.log('User cancelled login or did not fully authorize.');
+        }
+      }, {scope: 'email, user_posts'});
+    }
+
+    function displayFeed(feed) {
+      const feedDiv = document.getElementById('feed');
+      feedDiv.innerHTML = ''; // Clear any previous feed content
+      feed.forEach(post => {
+        const postDiv = document.createElement('div');
+        postDiv.innerText = post.message;
+        feedDiv.appendChild(postDiv);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" version="24.7.4">
+  <diagram name="Page-1" id="w3rdUYLlyu68mInd5R9k">
+    <mxGraphModel dx="872" dy="481" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-1" value="&lt;span&gt;Planning&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;defining goals and objectives, highlighting necessities&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;" vertex="1" parent="1">
+          <mxGeometry x="42" y="40" width="150" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-2" value="Designing&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;plan user interfaces, sketches&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="35" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-3" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Coding&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;actual coding, writing of the code and integrating the APIs&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="40" width="165" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-4" value="Maintenance&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;fix bugs and update feature neccessary&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="275" width="150" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-5" value="Deployment&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;deploy to the internet,Go live&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;" vertex="1" parent="1">
+          <mxGeometry x="597.5" y="280" width="150" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-6" value="Testing&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;run automated tasks and run manual testing&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="270" width="165" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-7" value="Documentation&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Prepare and update documentation including user manuals and project guides&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;" vertex="1" parent="1">
+          <mxGeometry x="5" y="540" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-10" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="100" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-11" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="100" width="115" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-12" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;direction=south;notch=0;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="655" y="190" width="35" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-13" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;flipH=1;notch=0;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="340" width="127.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-16" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;flipH=1;notch=0;fontStyle=1;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBackgroundColor=none;labelBorderColor=default;textShadow=1;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="330" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zbnvZCwbeuGElQBC-Z2K-20" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.47;dx=52;direction=south;notch=0;labelBackgroundColor=none;fillColor=#09555B;fontColor=#EEEEEE;strokeColor=#BAC8D3;labelBorderColor=default;textShadow=1;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="435" width="30" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

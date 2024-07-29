@@ -1,0 +1,14 @@
+
+{
+  "type": "module",
+  "description": "description",
+  "authors": "author",
+  "version": "1.0.0",
+  "main": "pathToMain",
+  "dependencies": {
+    "node.js": "^0.0.1-security",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "main":"Index.js"
+  }
+}

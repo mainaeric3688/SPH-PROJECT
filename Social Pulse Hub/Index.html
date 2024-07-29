@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Login</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #1DA1F2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #1A91DA;
+        }
+    </style>
+</head>
+<body>
+    <button id="twitter-login-btn">Login with Twitter</button>
+
+    <script>
+        document.getElementById('twitter-login-btn').addEventListener('click', function() {
+            fetch('/auth/twitter/url')
+                .then(response => response.json())
+                .then(data => {
+                    const popupWidth = 600;
+                    const popupHeight = 700;
+                    const left = (window.innerWidth / 2) - (popupWidth / 2);
+                    const top = (window.innerHeight / 2) - (popupHeight / 2);
+
+                    const popup = window.open(data.url, 'Twitter Login', `width=${popupWidth},height=${popupHeight},top=${top},left=${left}`);
+
+                    const interval = setInterval(function() {
+                        if (popup.closed) {
+                            clearInterval(interval);
+                            // Check if user has successfully logged in (handle this as needed)
+                            alert('Login window closed. Please check your login status.');
+                        }
+                    }, 1000);
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

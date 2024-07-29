@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1DA1F2; /* Twitter blue */
+    padding: 10px;
+    color: white;
+}
+
+.sidebar button {
+    background-color: #ffffff;
+    color: #1DA1F2;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar button:hover {
+    background-color: #e1e8ed;
+}
+
+.content {
+    margin-left: 220px; /* Adjust according to the width of your sidebar */
+    padding: 20px;
+}
+
+#twitter-login-form {
+    display: none; /* Hidden by default */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#twitter-login-form input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

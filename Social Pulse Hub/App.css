@@ -1,0 +1,394 @@
+body {
+    background-color: black;
+    cursor: default;
+    overflow-x: hidden;
+}
+.container {
+
+    display: flex;
+    margin-block: -8px;
+    margin-inline-start: -10px;
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for header items */
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    border: 4px solid rgba(17, 110, 177, 0.356);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 15vh;
+    text-align: center;
+    z-index: 0;
+}
+#home {
+    font-size: 0.8em;
+    color: rgb(108, 206, 221);
+}
+
+.header .item {
+    position: relative;
+    cursor: pointer;
+}
+ #img {
+    padding: 20px 20px;
+    width: 85px;
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+}
+#img:hover {
+    transform: scale(1.5); 
+}
+
+.header .item span {
+    display: block;
+    position: absolute;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid blue;
+    padding: 10px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    top: 70px; /* Adjust distance from top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 180px; /* Adjust width as needed */
+}
+#img:hover .header .item span:hover {
+    color: blue;
+}
+
+.header .item:hover span {
+    display: block;
+}
+
+/* Additional styling for popup content */
+.popup-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border: 2px solid rgba(17, 110, 177, 0.356);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    top: 120px; /* Adjust distance from top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    text-align: center;
+    width: 180px; /* Adjust width as needed */
+}
+.item a {
+    color: blue;
+    text-decoration-line: none;
+}
+.item a:hover {
+    color:red;
+}
+
+.header .item:hover .popup-content {
+    display: block;
+}
+
+.img-grid {
+
+    z-index: -1;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40vh;
+    padding-top: 180px;
+    align-content: center;
+    position: absolute;
+    align-content: center;
+    color: white;
+    justify-content: space-evenly;
+}
+.img-grid img{
+    padding: 20px 20px;
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 80vh; 
+    z-index: -1;   
+    max-width: 100%;
+    
+}
+.explore {
+    justify-content: center;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-shrink: inherit;
+    margin-right: 20vh;
+    color: white;
+    padding: 0px auto; 
+}
+.explore img{
+    padding: 0px 20px;
+    flex: 0 0 auto;
+    width: 80vh; 
+    z-index: -1;   
+    max-width: 100%;
+    
+}
+.explore #span-txt {
+    margin-right: 20vh;
+    padding-top: 20vh;
+}
+.explore #span-txt h3 {
+    color: cyan;
+    letter-spacing: 0.8px; 
+
+}
+#span-txt {
+    padding-top: 10vh;
+    flex: 1; 
+    padding-right: 28px;
+    font-size: 1.0em;
+    letter-spacing: 0.8px; 
+}
+#span-txt h3{
+    line-height: 1.0;
+    color: blue;
+    font-size: 2.5em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+#span-txt  p {
+    font-size: 1.0em;
+    line-height: 1.3;
+    line-height-step: 2;
+
+}
+.nav-link {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.nav-link img{
+    margin: 0px 5px;
+    width: 24px;
+}
+
+.sidebar {
+    border: 4px solid rgba(17, 110, 177, 0.356);
+    position: fixed;
+    display: grid;
+    width: fit-content;
+    background-color: black;
+    color: white;
+    padding: 4vh 4vh;
+    height: 100%;
+    min-width: 100px;
+}
+.profile .acc {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+.profile .acc span {
+    padding: 10px 0px;
+}
+.profile .acc img{
+    width: 34px;
+}
+.popup-account-content {
+    display: none;
+    position: absolute;
+    color: white;
+    padding: 10px 10px;
+    left: 50%;
+    z-index: 1000;
+    text-align: center;
+    width: 100px;
+}
+.popup-account-content a {
+    text-decoration-line: none;
+    color: black;
+    font-weight: 800;
+    text-align: center;
+}
+.profile:hover .popup-account-content {
+    display: block;
+}
+.sidebar a {
+    text-align: center;
+    height: 1.5em;
+    padding: 2px 0px;
+    margin-block: -10vh;
+    text-decoration-line: none;
+    color: white;
+    border: 2px solid rgba(17, 110, 177, 0.356);
+    min-width: 100px;
+}
+.sidebar a:hover {
+    transition: 0.5s;
+    background-color:  rgba(17, 110, 177, 0.356);
+}
+.sidebar #logo {
+    width: 20vh;
+    min-width: 100px;
+}
+.sidebar #Title {
+    margin-block: -12vh;
+    color: gray;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8em;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+#root {
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    min-width: 350px;
+    height: max-content;
+    margin-left: 250px;
+    text-align: center;
+    margin-block: 80vh;
+}
+#fb-login-button {
+   text-align: center;
+   padding: 20px 20px;
+}
+#fb {
+    text-align: center;
+    font-weight: 800;
+    color: #1877F2;
+    padding: 2px 2px;
+    display: flex;
+    font-size: 2.8em;
+}
+#ig {
+    display: flex;
+   text-align: center;
+    font-weight: 800;
+    color: #E4405F;
+    padding: 2px 2px;
+    font-size: 2.8em;
+}
+#x {
+    display: flex;
+    text-align: center;
+    font-weight: 800;
+    color: #1877F2;
+    padding: 2px 2px;
+    font-size: 2.8em;
+}
+#fb img, #x img, #ig img {
+    margin: 0px 10px;
+    width: 40px;
+}
+#status {
+    border-top: 4px solid rgba(17, 110, 177, 0.356);
+    margin-top: 30px;
+    width: 70%;
+    margin-left: 15vh;
+    justify-content: center;
+    justify-content: center;
+}
+#status img {
+    width: 100%;
+    align-self: center;
+    min-width: 300px;
+    padding: 10px 10px;
+}
+.explore-txt {
+    border-top: 2px solid rgba(17, 110, 177, 0.356);
+    padding: 20px 20px;
+    display: flex;
+    z-index: 0;
+    color: rgb(108, 206, 221);
+    background-color: black;
+    font-weight: 900;
+}
+.explore-txt #explore-txt:hover {
+    color: rgb(55, 202, 224);
+    font-weight: 800
+    ;
+}
+.Instagram-content {
+    border-top: 4px solid rgba(17, 110, 177, 0.356);
+    display: flex;
+}
+button #instagram-login {
+    
+    text-align: center;
+    border: 4px solid rgba(17, 110, 177, 0.356);
+    height: 0.8cm;
+    width: 20vh ;
+    padding-top: 10px;
+    margin-left: 40vh;
+}
+#instagram-login:hover {
+    color:white;
+    background-color: #E4405F;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.facebook-content {
+    border-top: 4px solid rgba(17, 110, 177, 0.356);
+    display: flex;
+}
+button #facebook-login {
+    
+    text-align: center;
+    border: 4px solid rgba(17, 110, 177, 0.356);
+    height: 1.0cm;
+    padding: 10px 10px;
+    margin-left: 40vh;
+}
+#facebook-login:hover {
+    color:white;
+    background-color: #1877F2;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.twitter-content {
+    border-top: 4px solid rgba(17, 110, 177, 0.356);
+    display: flex;
+}
+button #twitter-login {
+    
+    text-align: center;
+    border: 4px solid rgba(17, 110, 177, 0.356);
+    height: 1.0cm;
+    padding: 10px 10px;
+    margin-left: 40vh;
+}
+#twitter-login:hover {
+    color:white;
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+footer {
+    align-self: baseline;
+    justify-self: baseline;
+    padding: 50px 20x;
+    background-color: rgba(17, 110, 177, 0.356);
+    border-top: 4px solid rgba(17, 110, 177, 0.356);
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
